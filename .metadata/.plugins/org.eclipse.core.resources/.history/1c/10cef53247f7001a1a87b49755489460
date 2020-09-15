@@ -69,10 +69,7 @@ public class HomeController {
 		return s;
 	}
 	@DeleteMapping("/student/{sid}")
-	@ResponseBody
 	public String deleteStduent(@PathVariable("sid") int sid) {
-		Student s=sd.getOne(sid);
-		sd.delete(s);
 		return "Deleted";
 		
 	}
