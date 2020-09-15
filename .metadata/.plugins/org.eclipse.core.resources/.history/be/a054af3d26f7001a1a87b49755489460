@@ -13,10 +13,5 @@ Enter Student ID:: <input type="text" name="sid" value=""><br><br>
 Enter Student Name:: <input type="text" name="name" value=""><br><br>
 <input type="submit">
 </form>
-<hr>
-<form action="getStudent">
-Enter Student ID:: <input type="text" name="sid" value=""><br><br>
-<input type="submit">
-</form>
 </body>
 </html>

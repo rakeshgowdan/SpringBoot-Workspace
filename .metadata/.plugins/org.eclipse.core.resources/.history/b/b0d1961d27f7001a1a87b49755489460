@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.rakesh.demo.dao.StudentDao;
 import com.rakesh.demo.model.Student;
@@ -28,11 +27,9 @@ public class HomeController {
 		return "home";
 	}
 	@RequestMapping("/getStudent")
-	public ModelAndView  getStudent(@RequestParam String sid)
+	public String  getStudent(@RequestParam String sid)
 	{
-		ModelAndView mv=new ModelAndView("showStudent");
-		Student student=sd.findById(Integer.parseInt(sid)).orElse(new Student());
-		mv.addObject(student);
-		return mv;
+		sd.findById(Integer.parseInt(sid));
+		return "home";
 	}
 }

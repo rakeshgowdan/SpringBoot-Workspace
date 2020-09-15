@@ -31,8 +31,8 @@ public class HomeController {
 	public ModelAndView  getStudent(@RequestParam String sid)
 	{
 		ModelAndView mv=new ModelAndView("showStudent");
-		Student student=sd.findById(Integer.parseInt(sid)).orElse(new Student());
-		mv.addObject(student);
+		Student std=sd.findById(Integer.parseInt(sid)).orElse(new Student());
+		mv.addObject(std);
 		return mv;
 	}
 }
