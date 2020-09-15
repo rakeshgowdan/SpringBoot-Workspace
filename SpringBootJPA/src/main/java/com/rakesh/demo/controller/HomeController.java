@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -75,5 +77,12 @@ public class HomeController {
 		sd.delete(s);
 		return "Deleted";
 		
+	}
+	@PutMapping(path="/Ustudents",consumes = {"application/json"})
+	@ResponseBody
+	public Student saveOrUpdateStudent(@RequestBody Student s) {
+		sd.save(s);
+		System.out.println("data added");
+		return s;
 	}
 }
