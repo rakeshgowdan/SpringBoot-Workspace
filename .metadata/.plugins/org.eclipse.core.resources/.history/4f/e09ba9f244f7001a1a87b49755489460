@@ -61,8 +61,7 @@ public class HomeController {
 		return sd.findById(sid);
 	}
 	@PostMapping("/student")
-	@ResponseBody
-	public Student addStudent1(Student s){
+	public Student addStudent(Student s){
 		sd.save(s);
 		return s;
 	}
