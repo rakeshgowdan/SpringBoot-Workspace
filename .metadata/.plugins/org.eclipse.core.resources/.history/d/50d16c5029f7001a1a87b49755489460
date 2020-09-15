@@ -14,15 +14,8 @@ Enter Student Name:: <input type="text" name="name" value=""><br><br>
 <input type="submit">
 </form>
 <hr>
-<h5>fetch by ID</h5>
 <form action="getStudent">
 Enter Student ID:: <input type="text" name="sid" value=""><br><br>
-<input type="submit">
-</form>
-<hr>
-<h5>fetch by Name</h5>
-<form action="getStudentbyName">
-Enter Student Name:: <input type="text" name="sname" value=""><br><br>
 <input type="submit">
 </form>
 </body>

@@ -35,11 +35,4 @@ public class HomeController {
 		mv.addObject(student);
 		return mv;
 	}
-	@RequestMapping("/getStudentbyName")
-	public ModelAndView getStudentbyName(@RequestParam String sname) {
-		ModelAndView mv=new ModelAndView("showStudent");
-		Student student=sd.findByName(sname);
-		mv.addObject(student);
-		return mv;
-	}
 }
