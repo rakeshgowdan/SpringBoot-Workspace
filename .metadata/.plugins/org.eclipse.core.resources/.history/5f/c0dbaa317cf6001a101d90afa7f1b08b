@@ -1,0 +1,12 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class System {
+
+	
+	public void load() {
+		System.out.println("In System.load--> System.class");
+	}
+}

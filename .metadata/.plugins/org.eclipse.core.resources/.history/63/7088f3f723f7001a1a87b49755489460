@@ -1,0 +1,5 @@
+package com.rakesh.demo.dao;
+
+public interface StudentDao {
+
+}
