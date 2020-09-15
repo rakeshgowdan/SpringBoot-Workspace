@@ -47,8 +47,6 @@ public class HomeController {
 		mv.addObject(student);
 		return mv;
 	}
-	
-	//@RequestMapping(path="/students",produces={"application/xml"})
 	@RequestMapping("/students")
 	@ResponseBody
 	public List<Student> getAllStudents() {
