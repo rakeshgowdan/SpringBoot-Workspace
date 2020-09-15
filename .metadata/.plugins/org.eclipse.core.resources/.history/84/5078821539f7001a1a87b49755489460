@@ -1,6 +1,5 @@
 package com.rakesh.demo.controller;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +48,7 @@ public class HomeController {
 	}
 	@RequestMapping("/students")
 	@ResponseBody
-	public List<Student> getAllStudents() {
+	public String getAllStudents() {
 		return sd.findAll();
 	}
 	@RequestMapping("/student/{sid}")

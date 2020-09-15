@@ -1,8 +1,5 @@
 package com.rakesh.demo.controller;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -49,12 +46,12 @@ public class HomeController {
 	}
 	@RequestMapping("/students")
 	@ResponseBody
-	public List<Student> getAllStudents() {
-		return sd.findAll();
+	public String getAllStudents() {
+		return sd.findAll().toString();
 	}
 	@RequestMapping("/student/{sid}")
 	@ResponseBody
-	public Optional<Student> getStudent(@PathVariable("sid") int sid) {
-		return sd.findById(sid);
+	public String getStudent(@PathVariable("sid") int sid) {
+		return sd.findById(sid).toString();
 	}
 }
